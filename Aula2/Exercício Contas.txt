@@ -1,0 +1,9 @@
+var numero1 = prompt("Informe o primeiro numero");
+var numero2 = prompt("Informe o segundo numero");
+
+var resultadoAdicao = parseInt(numero1) + parseInt(numero2);
+var resultadoSubtracao = parseInt(numero1) - parseInt(numero2);
+var resultadoMultiplicacao = parseInt(numero1) * parseInt(numero2);
+var resultadoDivisao = parseInt(numero1) / parseInt(numero2);
+
+alert(numero1 + " + " + numero2 + " = " + resultadoAdicao + "\n" + numero1 + " - " + numero2 + " = " + resultadoSubtracao + "\n" + numero1 + " / " + numero2 + " = " + resultadoDivisao + "\n" + numero1 + " * " + numero2 + " = " + resultadoMultiplicacao);
