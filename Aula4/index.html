@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="funcoes.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <input type="text" id="palpite" placeholder="PALPITE">
+    <div id="mensagem"></div>
+    <button type="button" onclick="Jogo(document.getElementById('palpite').value);">Jogo de adivinhar</button>
+    <hr>
+
+    <h2>Par ou ímpar</h2>
+    <input type="text" id="valor" placeholder="DIGITE UM VALOR">
+    <input type="radio" value="p" name="parImpar" id="par">PAR
+    <input type="radio" value="i" name="parImpar" id="impar">ÍMPAR
+    <div id="respostaParImpar"></div>
+    <button type="button" onclick="ParImpar();">Par ou Ímpar</button>
+
+    <hr>
+    <h2>Pagamento</h2>
+    Valor: <input type="text" id="valorPagar"><br>
+    <input type="radio" value="d" name="formaPagamento" id="dinheiro" onclick="CalcularPagamento();">DINHEIRO
+    <input type="radio" value="c" name="formaPagamento" id="cartao" onclick="CalcularPagamento();">CARTÃO
+    <br>
+    Total: <input type="text" id="totalPagar">
+</body>
+</html>
