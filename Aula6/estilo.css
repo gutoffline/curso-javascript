@@ -1,0 +1,24 @@
+body{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.pokemon-foto{
+    width: 150px;
+    filter: brightness(0);
+    position: relative;
+    top: 130px;
+    left: 40px;
+}
+
+#pokemon{
+    background-image: url('imagens/fundo.png');
+    height: 480px;
+    width: 640px;
+    text-align: left;
+}
+
+
+#pokemon img{
+    border:2px solid red;
+}
