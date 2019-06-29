@@ -16,6 +16,8 @@ body{
     height: 480px;
     width: 640px;
     text-align: left;
+    margin: 0 auto;
+    border: 2px solid black;
 }
 
 
