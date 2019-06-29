@@ -4,16 +4,16 @@
         <title>Qual é esse Pokemon</title>
         <link href="estilo.css" rel="stylesheet">
     </head>
-    <body>
-        <h1>Qual é esse pokemon?</h1>
+    <body onload="GerarBotoes();">
+        <h1>Quem é esse pokemon?</h1>
         <div id="pokemon">
             <img src="imagens/p1.png" class="pokemon-foto">
+            <h2 id="pokemon-nome">???</h2>
         </div>
-        <div id="botoes">
-            <button type="button">Pikachu</button>
-            <button type="button">Charmander</button>
-            <button type="button">Psyduck</button>
-        </div>
+        <div id="botoes"></div>
+        <br>
+        <button type="button" onclick="Ajuda();" class="ajuda">Preciso de Ajuda!</button>
+        <div id="pokemon-ajuda"></div>
         <script src="funcoes.js"></script>
     </body>
 </html>
