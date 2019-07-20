@@ -1,6 +1,6 @@
 // var filmes = ['Karate Kid', 'Garotos Perdidos'];
 // var posters = ['karate-kid.jpg' , 'garotos-perdidos.jpg'];
-var ingressos = 0;
+var ingressos = [];
 var filmes = [ 
     {  
         id: 0,
@@ -70,9 +70,23 @@ function MontaCartao(filme){
 }
 
 function ComprarIngresso(codigoFilme){
-    alert('Você irá comprar ingresso para o filme: ' + filmes[codigoFilme].nome);
-    ingressos++;
-    $('.ingressos').text(ingressos);
+    var confirmacao = confirm('Você irá comprar ingresso para o filme: ' + filmes[codigoFilme].nome);
+    
+    if(confirmacao){
+        ingressos.push(filmes[codigoFilme].nome);
+        $('.ingressos').text(ingressos.length);
+
+        var listaDeIngressos = "";
+        for(var i=0 ; i < ingressos.length ; i++){
+            listaDeIngressos += "<li>" + ingressos[i] + "</li>";
+        }
+        $('.lista-ingressos').html(listaDeIngressos);
+
+        
+        if($('#botao-finalizar').length <= 0 ){
+            $('.area-carrinho').append('<button type="button" id="botao-finalizar" class="botao-comprar">FINALIZAR</button>');
+        }
+    }
 }
 
 ListarFilmes();
