@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laços</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="lib/pure-1.0.0/pure.css">
+        <script src="lib/jquery-3.3.1.js"></script>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+        <link href="lib/Multipurpose-Tabs-Accordion/css/style.css" rel="stylesheet">
+        <script src="lib/Multipurpose-Tabs-Accordion/js/jquery.multipurpose_tabcontent.js"></script>
+
+        <script src="lib/jQuery-Mask-1.14.15/src/jquery.mask.js"></script>
+
+        <link rel="stylesheet" href="lib/Nivo-Slider-3.2/themes/default/default.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="lib/Nivo-Slider-3.2/nivo-slider.css" type="text/css" />  
+        <script src="lib/Nivo-Slider-3.2/jquery.nivo.slider.js" type="text/javascript"></script>
+
+        <link rel="stylesheet" type="text/css" href="lib/slick-1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="lib/slick-1.8.1/slick/slick-theme.css"/>
+        <script type="text/javascript" src="lib/slick-1.8.1/slick/slick.min.js"></script>
+
+        <script src="lib/jsPDF/dist/jspdf.debug.js"></script>
+
+		<script src="js/funcoes.js"></script>
+    </head>
+    <body>
+        <div id="slider" class="nivoSlider  theme-default">     
+            <a href="http://uol.com.br"><img src="img/natal1.jpg" alt="" title="Feliz Natal"/>    </a>
+            <img src="img/natal2.jpg" alt="" title="#htmlcaption"/>    
+            <img src="img/natal3.jpg" alt="" />    
+            <img src="img/natal4.jpg" alt="" />    
+        </div> 
+        <div id="htmlcaption" class="nivo-html-caption">     
+            <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+        </div>
+
+        <h1 id="titulo">Sistema Lanches</h1>
+        <hr>
+        <div class="tab_wrapper">
+            <ul>
+                <li>Adicionar Produto</li>
+                <li>Cardápio</li>
+                <li>Pedido</li>
+                <li>Pagamento</li>
+            </ul>
+        
+            <div class="content_wrapper">
+                <div class="tab_content"> 
+                    <form class="pure-form">
+                        <label>Descrição</label>
+                        <input type="text" id="descricao">
+                        <label>Preço</label>
+                        <input type="text" id="preco">
+                        <button class="pure-button pure-button-primary" type="button" id="Add-Produto">Adicionar Produto</button>
+                    </form>
+                </div>
+                <div class="tab_content"> 
+                    <table class="pure-table pure-table-bordered">
+                        <thead>
+                            <th>Código</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                            <th>Ações</th>
+                        </thead>
+                        <tbody id="Tabela-Cardapio"></tbody>
+                    </table>   
+                </div>
+
+                <div class="tab_content"> 
+                    <form class="pure-form">
+                        <label>Produto</label>
+                        <select id="produtos"></select>
+                        <label>Quantidade</label>
+                        <input type="number" id="quantidade">
+                        <button type="button" id="Add-Pedido" class="pure-button pure-button-primary">Adicionar</button>
+                    </form>
+                    <table class="pure-table pure-table-bordered">
+                        <thead>
+                            <th>Código</th>
+                            <th>Descrição</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                            <th>Total</th>
+                            <th>Ações</th>
+                        </thead>
+                        <tbody id="Tabela-Pedido"></tbody>
+                    </table>
+                </div>
+                
+                <div class="tab_content"> 
+                    <div id="cupom">
+                        Total: R$ <span id="Total-Pedido">-</span><br>
+                        Serviço: R$ <span id="Taxa-Servico">-</span><br>
+                        Total à pagar: R$ <span id="Total-Pagar">-</span><br>
+                    </div>
+
+                    <button type="button" id="relatorio">Relatório Fiscal</button>
+                </div>
+          </div>
+        </div>
+        <div class="container-galeria" style="width: 500px; margin: 0 auto;">
+            <div class="galeria" >
+                <img src="img/lanche1.png" alt="" />    
+                <img src="img/lanche2.png" alt="" />    
+                <img src="img/lanche3.jpg" alt="" />    
+                <img src="img/lanche4.png" alt="" />    
+                <img src="img/lanche5.jpg" alt="" />    
+                <img src="img/lanche6.jpg" alt="" />    
+                <img src="img/lanche7.jpg" alt="" />    
+            </div>
+        </div>
+    </body>
+</html>

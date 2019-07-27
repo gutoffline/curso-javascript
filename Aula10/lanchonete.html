@@ -14,8 +14,10 @@
         <link href="lib/slick/slick-theme.css" rel="stylesheet">
         <script src="lib/slick/slick.js"></script>
 
-        <script src="lib/modal/modal.js"></script>
-        <link href="lib/modal/modal.css" rel="stylesheet">
+        <link href="lib/multipurpose_tabcontent/css/style.css" rel="stylesheet">
+        <script src="lib/multipurpose_tabcontent/js/jquery.multipurpose_tabcontent.js"></script>
+
+        <script src="lib/jsPDF/dist/jspdf.min.js"></script>
 
         <script src="projeto.js"></script>
         <link href="projeto.css" rel="stylesheet">
@@ -29,15 +31,29 @@
         </div>
 
         <h1>Sistema Lanchonete</h1>
+        <hr>
+        <div class="tab_wrapper abas">
+            <ul class="tab_list">
+                <li class="active">CARDÁPIO</li>
+                <li>CONSULTAR ENDEREÇO</li>
+            </ul>
+            <div class="content_wrapper">
+                <div class="tab_content active">
+                    <div id="cardapio-inicial"></div>
+                </div>
 
-        <div id="ex1" class="modal">
-            <p>Thanks for clicking. That felt good.</p>
-            <a href="#" rel="modal:close">Close</a>
+                <div class="tab_content">
+                    <form class="pure-form">
+                        <input id="cep" placeholder="CEP">
+                        <button type="button" onclick="PesquisarEndereco();" class="pure-button pure-button-primary">Pesquisar</button>
+                    </form>
+                    <div id="endereco-completo"></div>
+
+                    <button type="button" onclick="GerarPDF();" class="button-success pure-button ">Imprimir Endereço</button>
+                </div>
+            </div>
         </div>
-              
-        <!-- Link to open the modal -->
-        <p><a href="#ex1" rel="modal:open" class="pure-button pure-button-primary">Open Modal</a></p>
-
+        
         <div style="width: 500px; margin: 0 auto;">
             <div class="galeria">
                 <img src="img/lanche1.png">
